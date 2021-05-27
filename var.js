@@ -7,3 +7,6 @@ module.exports = {
     odd,
     even,
 }
+
+// exports.odd = odd;
+// exports.even = even;

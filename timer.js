@@ -2,7 +2,7 @@ const timeout = setTimeout(() => {
     console.log('1.5초 후 실행');
 }, 1500);
 
-const  interval = setInterval(() => {
+const interval = setInterval(() => {
     console.log('1초마다 실행');
 }, 1000);
 
@@ -24,3 +24,5 @@ const immediate2 = setImmediate(() => {
 });
 
 clearImmediate(immediate2);
+
+// 즉시 실행 -> 1초 마다 실행 -> 1.5초 후 실행 -> 1초 마다 실행
