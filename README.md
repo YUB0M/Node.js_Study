@@ -5,5 +5,5 @@
   * WebStorm(macOS)
 
 * 언어
-  * Node.js(14.16.0 LTS)
+  * Node.js(16.2.0 LTS)
   
