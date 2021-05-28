@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ac9c40c-d3e3-4d03-85cb-2be8a2637fa4" name="Default Changelist" comment="REPL, 모듈, global, console, timer">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/async.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asyncOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asyncOrderPromise.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cipher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dep-run.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dep1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dep2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/filename.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nextTick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/os.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/path.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/querystring.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/searchParams.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spawn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/this.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/worker_threads.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/writeFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/writeme.txt" afterDir="false" />
+    <list default="true" id="0ac9c40c-d3e3-4d03-85cb-2be8a2637fa4" name="Default Changelist" comment="process, os, path, url&amp;querystaring, crypto util, node async와 sync">
+      <change afterPath="$PROJECT_DIR$/buffer-memory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buffer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/copyFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createBigFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createReadStream.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/createWriteStream.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/event.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fsCreate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fsDelete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stream-memory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/threadpool.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/watch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/timer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var.js" beforeDir="false" afterPath="$PROJECT_DIR$/var.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +32,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1t1Zackur5zcFilnIEw3LNY87Em" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,6 +50,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -62,8 +59,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="createBigFile.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/createBigFile.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.createBigFile.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -77,7 +89,10 @@
       <workItem from="1621938954703" duration="39000" />
       <workItem from="1622093397413" duration="10184000" />
       <workItem from="1622105678099" duration="839000" />
-      <workItem from="1622106521483" duration="2176000" />
+      <workItem from="1622106521483" duration="2494000" />
+      <workItem from="1622174132900" duration="253000" />
+      <workItem from="1622181158571" duration="1724000" />
+      <workItem from="1622182966506" duration="6578000" />
     </task>
     <task id="LOCAL-00001" summary="REPL, 모듈, global, console, timer">
       <created>1621938872207</created>
@@ -86,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621938872207</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="process, os, path, url&amp;querystaring, crypto util, node async와 sync">
+      <created>1622109068042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1622109068042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +128,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="REPL, 모듈, global, console, timer" />
-    <option name="LAST_COMMIT_MESSAGE" value="REPL, 모듈, global, console, timer" />
+    <MESSAGE value="process, os, path, url&amp;querystaring, crypto util, node async와 sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="process, os, path, url&amp;querystaring, crypto util, node async와 sync" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
