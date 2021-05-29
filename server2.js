@@ -7,8 +7,9 @@ const server = http.createServer(async (req, res) =>{
         const data = await fs.readFile('./server2.html');
         res.end(data);
     }catch (error){
-        console.error(err);
-        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+        console.error(error);
+        res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
+        //plain : 일반 문자열을 알려줌
         res.end(err.message);
     }
 })
