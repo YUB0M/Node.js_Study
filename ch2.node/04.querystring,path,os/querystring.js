@@ -1,5 +1,5 @@
 const url = require('url');
-const querystring = require('querystring');
+const querystring = require('ch1-ch4/3.5/querystring');
 
 const parsedUrl = url.parse('http://www.gilbut.co.kr/?page3&limig=10&category=nodejs&category=javascript');
 const query = querystring.parse(parsedUrl.query);

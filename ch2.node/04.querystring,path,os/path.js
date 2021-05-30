@@ -1,5 +1,5 @@
 
-const path = require('path');
+const path = require('ch1-ch4/3.5/path');
 
 // 운영체제 별 경로처리
 // c:\users\bomyu

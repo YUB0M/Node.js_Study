@@ -1,4 +1,4 @@
-const { Worker, isMainThread, parentPort } = require('worker_threads');
+const { Worker, isMainThread, parentPort } = require('buffer-stream/worker_threads');
 
 if (isMainThread){ // 메인스레드
     const worker = new Worker(__filename);

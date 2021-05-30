@@ -2,12 +2,12 @@ async function getUser() { // 로딩 시 자동으로 가져오는 함수
     try{
         const res = await axios.get('/users');
         const users = res.data;
-        const list = document = document.getElementById('list');
+        const list = document.getElementById('list');
         list.innerHTML = '';
         // 사용자마다 반복적으로 화면 표시 및 이벤트 연결
         // 요청을 보내는 곳
         Object.keys(users).map(function (key) {
-            const userDiv = document.createElement('span');
+            const userDiv = document.createElement('div');
             const span = document.createElement('span');
             span.textContent = users[key];
             const edit = document.createElement('button');
