@@ -1,0 +1,37 @@
+0.package.json 만들기
+npm i express
+npm i -D nodemon
+
+1. npm이란?
+Node Package Manager
+- 노드의 패키지 매니저
+- 패키지 : npm에 업로드된 노드 모듈
+- 의존 관계
+
+2. 패키지 버전 이해하기
+- SemVer 버저닝
+ㄴ Major(주 버전), Minor(부 버전), Patch(수 버전)
+    M : 하위 버전과 호환되지 않는 수정사항
+    M : 하위 버전과 호환되는 수정사항
+    P : 기능에 버그를 해결했을 때 올림(간단한 버그 수정)
+
+3. npm search
+$ npm info express
+
+4. 콘솔
+$ npm adduser
+Username : [사용자 이름 입력]
+Password : [비밀번호 입력]
+Email: (this IS public) [이메일 입력]
+Logged in as [사용자 이름]
+
+$npm whoami
+
+$npm version major : 깃 커밋까지 같이해줌
+
+$npm publish : 자신이 만든 패키지를 배포
+$npm unpublish : 자신이 만든 패키지를 배포 중단(배포 후 72시간 내에만)
+$npm unpublish [패키지명] --force :
+
+
+
