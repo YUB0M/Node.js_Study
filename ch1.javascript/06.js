@@ -37,7 +37,7 @@ var relationship1 = {
 };
 relationship1.logFriend();
 
-// ----------------------------------------------
+// -----------------------------------------------
 // 화살표 함수
 var relationship2 = {
     name : 'yubom',

@@ -1,5 +1,5 @@
 
-/*javascript 호출 스택2*/
+/*javascript 호출 스택2 */
 
 function run() {
     console.log('3초 후 실행')
