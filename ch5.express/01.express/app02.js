@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const cookieParser = require('cookieParser');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const dotenv = require('dotenv');
 const path = require('path');
