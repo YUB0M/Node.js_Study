@@ -30,7 +30,50 @@ app.use(session({
     name: 'session-cookie'
 }));
 
-app.use((req, res, next) => {
-    console.log('모든 요청에 다 실행됩니다.');
+const multer  = require('multer');
+const fs = require('fs');
+
+try {
+    fs.readdirSync('uploads');
+}catch (error) {
+    console.error('uploads 폴더가 없어 upload 폴더를 생성합니다.');
+    fs.mkdirSync('uploads');
+}
+const upload = multer({
+    storage: multer.diskStorage({
+        destination(req, file, done) {
+            done(null, 'uploads/');
+        },
+        filename(req, file, done){
+            const ext = path.extname(file.originalname);
+            done(null, path.basename(file.originalname, ext) + Date.now() +ext);
+        },
+    }),
+    limits: { fileSize: 5 * 1024 * 1024 },
+});
+app.get('/upload', (req, res) => {
+    res.sendFile(path.join(__dirname, 'multipart.html'));
+});
+app.post('/upload', upload.single('image'), (req, res) => {
+    //upload.single : 1개만 이미지 올리기
+    //upload.array : 묶음으로 올리기
+    //upload.fields : 여러개 올리기
+    //upload.none : 이미지 업로드 X
+    console.log(req.file);
+    res.send('ok');
+});
+
+app.get('/', (req, res, next) => {
+    console.log('GET / 요청에서만 실행');
     next();
+}, (req, res) =>{
+    throw new Error('에러는 에러처리 미들웨어로')
+});
+app.use((err, req, res, next) => {
+    console.error(err);
+    res.status(500).send(err.message);
+});
+
+app.listen(app.get('port'), () => {
+    console.log(app.get('port'), '번 포트에서 대기 중');
 });

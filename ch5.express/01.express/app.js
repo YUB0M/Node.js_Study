@@ -1,46 +1,44 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
-const session = require('express');
-const cookieParser = require("cookie-parser");
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
+dotenv.config();
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
 
-app.use('/', express.static(__dirname, 'public'));
-app.use(morgan('dev'));//개발할때는 dev 배포할때는 combined
-app.use(cookieParser());
+//미들웨어 연결
+app.use(morgan('dev'));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
     resave: false,
-    saveUninitialized:false,
-    secret: 'bompassword',
-    cookie: {
+    saveUninitialized: false,
+    secret: process.env.COOKIE_SECRET,
+    cookie:{
         httpOnly: true,
-        secure: false,
-    }
+    },
 }));
+app.use('/', express.static(__dirname, 'public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res, next) =>{
-    //'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+app.get('/', (req, res, next) => {
     res.sendFile(path.join(__dirname, 'index.html'));
-    // 한 미들웨어에 res.send중복&json사용 시 오류
-    // res.send('안녕하세요'); ->
-    // res.json({ hello :'bomyu' });
 });
 
-app.post('/', (req, res) =>{
-    res.send('hello express');
+app.post('/', (req, res) => {
+    res.send('hello express!');
 });
 
 app.get('/category/Javascript', (req, res) => {
-   res.send(`hello Javasciript`);
+    res.send('hello Javascript');
 });
 
 app.get('/category/:name', (req, res) => {
-    res.send(`hello wildcard`);
+    res.send('hello wildcard');
 });
 
 app.get('/about', (req, res) => {
@@ -48,12 +46,12 @@ app.get('/about', (req, res) => {
 });
 
 app.use((req, res, next) => {
-    res.status(200).send('404지롱');
+    res.status(404).send('404 에러입니다 ~~!! ');
 });
 
 app.use((err, req, res, next) => {
     console.error(err);
-    res.status(200).send('에러가 났어욤');
+    res.status(200).send('에러났어용 이유는 비밀');
 })
 
 app.listen(app.get('port'), () => {
