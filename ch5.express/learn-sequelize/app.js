@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 
 const { sequelize } = require('./models');
+//router연결
 const indexRouter = require('./routes');
 const usersRouter = require('./routes/users');
 const commentsRouter = require('./routes/comments');
